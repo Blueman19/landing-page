@@ -1,46 +1,160 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;;
 }
 
 
 
-section {
+/*  Parametre du NAV*/
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #cd8c4f;
     background-color: black;
-    height: 100wh;
+    justify-content: space-between;
+}
+
+nav h1{
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+nav .onglets{
+    margin-top: 3px;
+    margin-left: 300px;
 
     display: flex;
+}
+
+nav .onglets a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    justify-content: 15px;
+}
+
+
+
+/*  Parametre du Header*/
+
+header{
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    background-color: #cd8c4f;
+    padding: 40px;
+}
+
+header h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+}
+
+
+
+/*  Parametre du main*/
+
+.main{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main .content .card{
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    margin-bottom:20px;
 }
 
-.blue, .green, .red {
-    width: 300px;
-    height: 200px;
+.main .content .card .left{
+   flex: 0 0 30%;
+   padding: 20px;
+   background-color:black;
+   color:#fff;
 }
 
-.blue {
-    background-color: blue;
+.main .content .card .right img{
+    height:300px;
+    width: 400px;
+    margin-top: 5px;
 }
 
-.green {
-    background-color: green;
+
+
+/*  Parametre du Footer*/
+
+footer{
+    margin-top: 40px;
+    border-top: 5px solid #cd8c4f;
+    background-color: black;
+    color: white;
+    padding: 30px 100px;;
 }
 
-.red {
-    background-color: red;
+footer h1{
+    font-family: 'Playfair Display', serif;
+    border-bottom: 1px solid white;
+    width: 20%;
+    padding-bottom: 5px;
 }
 
-@media screen and  (max-width: 900px) {
-    section {
-        display: block;
-        
+footer .caractéristiques{
+    margin-top: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .caractéristiqueses .type{
+    margin-right: 30px;
+}
+
+footer .caractéristiques .type p{
+    max-width: 300px;
+}
+
+footer #contact{
+    color: #cd8c4f;
+}
+
+
+
+/*  RESPONSIVE*/
+
+@media screen and (max-width:700px) {
+
+    nav .onglets {
+        margin-left: 0px;
+        margin-bottom: 20px;
     }
 
-    .blue, .green, .red {
-        font-size: 24px;
-        align-items: center;
+    .main .card {
+        margin: 10px;
+    }
+
+    .main .content .card .right img{
+        height:200px;
+        width: 100%;
+        margin-top: -0px;
+    }
+
+    .main .content .card{
+        display: flex;
+    }
+
+    footer{
+        padding: 30px;
     }
 }
-   
